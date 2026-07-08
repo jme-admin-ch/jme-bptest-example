@@ -1,0 +1,42 @@
+publiccodeYmlVersion: 0.5.0
+name: jme-bptest-example
+applicationSuite: JME
+softwareVersion: 1.0.0
+releaseDate: 2026-07-07
+url: "https://github.com/jme-admin-ch/jme-bptest-example.git"
+landingURL: "https://github.com/jme-admin-ch/jme"
+platforms:
+  - web
+categories:
+  - application-development
+developmentStatus: stable
+softwareType: standalone/backend
+organisation:
+  uri: https://ld.admin.ch/office/V.1.7
+  name: Federal Office of Information Technology, Systems and Telecommunication
+description:
+  en:
+    localisedName: jme-bptest-example
+    shortDescription: Example project demonstrating how to run jEAP business process tests with the jEAP Business Process Test Orchestrator.
+    longDescription: >
+      This example project demonstrates how to use the jEAP business process test libraries
+      jeap-bptest-orchestrator and jeap-bptestagent-api. It contains a small example business process
+      spanning two microservices (an order service and a billing service), two test agents that drive
+      and verify these services, and a business process test orchestrator instance that coordinates
+      the test agents to run an end-to-end business process test across the services.
+    features:
+      - Business process test orchestrator instance based on jeap-bptest-orchestrator
+      - Test agents implementing the jeap-bptestagent-api TestAgentOperations contract
+      - Example business process spanning an order service and a billing service
+      - End-to-end business process test case (OrderBillingHappyPath)
+legal:
+  license: Apache-2.0
+maintenance:
+  type: internal
+  contacts:
+    - name: Federal Office of Information Technology, Systems and Telecommunication FOITT
+      email: jeap-community@bit.admin.ch
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - en

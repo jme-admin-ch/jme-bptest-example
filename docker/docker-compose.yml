@@ -1,0 +1,42 @@
+---
+services:
+  # Databases
+  jme-bptest-order-testagent-db-local:
+    image: postgres:17.7
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=jme-bptest-order-testagent-db-local
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U admin -d jme-bptest-order-testagent-db-local" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  jme-bptest-billing-testagent-db-local:
+    image: postgres:17.7
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=jme-bptest-billing-testagent-db-local
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U admin -d jme-bptest-billing-testagent-db-local" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  jme-bptest-orchestrator-db-local:
+    image: postgres:17.7
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=jme-bptest-orchestrator-db-local
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U admin -d jme-bptest-orchestrator-db-local" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10

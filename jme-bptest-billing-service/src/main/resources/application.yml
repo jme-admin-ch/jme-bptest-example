@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: jme-bptest-billing-service
+server:
+  servlet:
+    context-path: /jme-bptest-billing-service
+springdoc:
+  show-actuator: false

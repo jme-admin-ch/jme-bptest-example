@@ -1,0 +1,32 @@
+# Persistence
+spring:
+  application:
+    name: jme-bptest-billing-testagent-service
+  jpa:
+    show-sql: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: data
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    enabled: true
+    # Flyway creates automatically the default schema if it doesn't exist
+    default-schema: ${spring.jpa.properties.hibernate.default_schema}
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    url: "jdbc:postgresql://localhost:5433/jme-bptest-billing-testagent-db-local"
+    username: admin
+    password: secret
+    hikari:
+      maximum-pool-size: 10
+      pool-name: "hikari-cp-${spring.application.name}"
+      schema: ${spring.jpa.properties.hibernate.default_schema}
+server:
+  servlet:
+    context-path: /jme-bptest-billing-testagent-service
+springdoc:
+  show-actuator: false

@@ -1,0 +1,30 @@
+server:
+  port: 8300
+
+jeap:
+  swagger:
+    status: open
+  monitor:
+    prometheus:
+      password: "{noop}secret"
+
+springdoc:
+  swagger-ui:
+    oauth:
+      client-secret: secret
+orchestrator:
+  callbackUrl: http://localhost:8300/jme-bptest-orchestrator-service
+  testRunTimeout: 60000
+  testagentURLs:
+    OrderTestAgent: "http://localhost:8271/jme-bptest-order-testagent-service"
+    BillingTestAgent: "http://localhost:8270/jme-bptest-billing-testagent-service"
+  zephyr:
+    # Test runs are reported to the local Zephyr stub of this orchestrator instance
+    # (see ZephyrReportingStubController) instead of a real Jira/Zephyr instance.
+    restApiUrl: http://localhost:8300/jme-bptest-orchestrator-service/api/zephyr-stub
+    zephyrEnvironment: LOCAL
+    username: none
+    password: none
+logging:
+  level:
+    ch.admin.bit.jeap.testorchestrator.adapter.zephyr.ZephyrWebClient: DEBUG

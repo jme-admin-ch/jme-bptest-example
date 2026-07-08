@@ -1,0 +1,17 @@
+server:
+  port: 8171
+
+jeap:
+  swagger:
+    status: open
+  monitor:
+    prometheus:
+      password: "{noop}secret"
+
+springdoc:
+  swagger-ui:
+    oauth:
+      client-secret: secret
+
+billingService:
+  url: "http://localhost:8170/jme-bptest-billing-service"

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: jme-bptest-order-service
+server:
+  servlet:
+    context-path: /jme-bptest-order-service
+springdoc:
+  show-actuator: false

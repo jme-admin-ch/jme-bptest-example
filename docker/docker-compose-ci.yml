@@ -1,0 +1,29 @@
+# CI overlay for docker-compose. This file is used to override the default docker-compose.yml file in CI
+# On CI, images are pulled from the internal registry mirror and the databases are reached through the
+# container network instead of published host ports.
+
+services:
+
+  jme-bptest-order-testagent-db-local:
+    image: postgres:17.7
+    ports: !reset [ ]
+    labels:
+      org.springframework.boot.ignore: true
+
+  jme-bptest-billing-testagent-db-local:
+    image: postgres:17.7
+    ports: !reset [ ]
+    labels:
+      org.springframework.boot.ignore: true
+
+  jme-bptest-orchestrator-db-local:
+    image: postgres:17.7
+    ports: !reset [ ]
+    labels:
+      org.springframework.boot.ignore: true
+
+networks:
+  default:
+    external: true
+    # Network is created by the CI job and includes the test runner & the containers started by this compose file
+    name: ${COMPOSE_PROJECT_NAME}_default

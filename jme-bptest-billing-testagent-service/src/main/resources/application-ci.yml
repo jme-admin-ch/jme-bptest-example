@@ -1,0 +1,5 @@
+# On CI, the database is reached through the container network instead of a published host port
+# (see docker/docker-compose-ci.yml).
+spring:
+  datasource:
+    url: "jdbc:postgresql://jme-bptest-billing-testagent-db-local:5432/jme-bptest-billing-testagent-db-local"

@@ -1,0 +1,17 @@
+server:
+  port: 8271
+
+jeap:
+  swagger:
+    status: open
+  monitor:
+    prometheus:
+      password: "{noop}secret"
+
+springdoc:
+  swagger-ui:
+    oauth:
+      client-secret: secret
+
+orderService:
+  url: "http://localhost:8171/jme-bptest-order-service"
