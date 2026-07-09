@@ -2,7 +2,7 @@
 services:
   # Databases
   jme-bptest-order-testagent-db-local:
-    image: postgres:17.7
+    image: postgres:18.4
     ports:
       - "5432:5432"
     environment:
@@ -15,7 +15,7 @@ services:
       timeout: 5s
       retries: 10
   jme-bptest-billing-testagent-db-local:
-    image: postgres:17.7
+    image: postgres:18.4
     ports:
       - "5433:5432"
     environment:
@@ -28,7 +28,7 @@ services:
       timeout: 5s
       retries: 10
   jme-bptest-orchestrator-db-local:
-    image: postgres:17.7
+    image: postgres:18.4
     ports:
       - "5434:5432"
     environment:
