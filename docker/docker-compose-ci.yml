@@ -5,19 +5,19 @@
 services:
 
   jme-bptest-order-testagent-db-local:
-    image: postgres:17.7
+    image: postgres:18.4
     ports: !reset [ ]
     labels:
       org.springframework.boot.ignore: true
 
   jme-bptest-billing-testagent-db-local:
-    image: postgres:17.7
+    image: postgres:18.4
     ports: !reset [ ]
     labels:
       org.springframework.boot.ignore: true
 
   jme-bptest-orchestrator-db-local:
-    image: postgres:17.7
+    image: postgres:18.4
     ports: !reset [ ]
     labels:
       org.springframework.boot.ignore: true
