@@ -25,7 +25,7 @@
     </licenses>
 
     <artifactId>jme-bptest-example</artifactId>
-    <version>5.2.0-SNAPSHOT</version>
+    <version>5.3.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -47,7 +47,7 @@
     <properties>
         <jeap-bptestagent-api.version>7.1.0</jeap-bptestagent-api.version>
         <jeap-bptest-orchestrator.version>12.2.0</jeap-bptest-orchestrator.version>
-        <jme-spring-boot-integration-test.version>5.8.1</jme-spring-boot-integration-test.version>
+        <jme-spring-boot-integration-test.version>5.9.0</jme-spring-boot-integration-test.version>
         <maven.javadoc.skip>false</maven.javadoc.skip>
     </properties>
 
