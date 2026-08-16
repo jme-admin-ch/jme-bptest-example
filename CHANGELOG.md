@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.0.0] - 2026-08-16
+
+### Dependencies
+- **ch.admin.bit.jeap:jeap-bptestagent-api**: 7.5.0 → 8.0.0 (major)
+- **ch.admin.bit.jeap:jeap-bptest-orchestrator**: 12.8.0 → 13.0.0 (major)
+
 ## [6.0.1] - 2026-08-14
 
 ### Dependencies
