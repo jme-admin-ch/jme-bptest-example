@@ -1,8 +1,8 @@
 publiccodeYmlVersion: 0.5.0
 name: jme-bptest-example
 applicationSuite: JME
-softwareVersion: 7.0.0
-releaseDate: 2026-08-17
+softwareVersion: 7.1.0
+releaseDate: 2026-08-18
 url: "https://github.com/jme-admin-ch/jme-bptest-example.git"
 landingURL: "https://github.com/jme-admin-ch/jme"
 platforms:
