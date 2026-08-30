@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [11.7.0] - 2026-08-30
+
+### Dependencies
+- **ch.admin.bit.jeap:jeap-bptest-orchestrator**: 16.5.0 → 16.6.0 (minor)
+- **ch.admin.bit.jeap.jme:jme-spring-boot-integration-test**: 6.1.0 → 6.2.0 (minor)
+
 ## [11.6.0] - 2026-08-28
 
 ### Dependencies
