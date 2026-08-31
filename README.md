@@ -26,6 +26,41 @@ It contains the following modules:
   which coordinates the two test agents to test the order/billing business process end-to-end.
 * **jme-bptest-test**: End-to-end integration test that starts all services locally and runs the example test case.
 
+```mermaid
+flowchart TB
+  subgraph ORCH["jme-bptest-orchestrator-service"]
+    P["Prepare"] --> E["Execute"] --> V["Verify"] --> C["CleanUp"] --> R["Report"]
+  end
+
+  ZEPHYR["Zephyr Scale - Jira<br/>(admin.ch)"]
+
+  subgraph FA_A["Business Application A"]
+    TA_A["TestAgent<br/>OrderService"] --> OS["OrderService"]
+  end
+
+  subgraph FA_B["Business Application B"]
+    TA_B["TestAgent Billing<br/>Service"] --> BS["BillingService"]
+  end
+
+  R --> ZEPHYR
+  E <--> TA_A
+  E <--> TA_B
+
+  classDef phase fill:#ffffff,stroke:#000000,stroke-width:2px
+  classDef agent fill:#ffe599,stroke:#333333,stroke-width:2px
+  classDef service fill:#a4c2f4,stroke:#333333,stroke-width:2px
+  classDef external fill:#ea9999,stroke:#333333,stroke-width:2px
+
+  class P,E,V,C,R phase
+  class TA_A,TA_B agent
+  class OS,BS service
+  class ZEPHYR external
+
+  style ORCH fill:#ffe599,stroke:#333333,stroke-width:2px
+  style FA_A fill:#b6d7a8,stroke:#333333,stroke-width:2px,stroke-dasharray: 5 5
+  style FA_B fill:#b6d7a8,stroke:#333333,stroke-width:2px,stroke-dasharray: 5 5
+```
+
 ## Prerequisites
 
 To use this project, ensure you have the following installed:
